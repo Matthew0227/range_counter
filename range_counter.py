@@ -19,11 +19,15 @@ def range_sorter(input_placeholder):
         forty1_to_fifty.append(input_placeholder)
 #core: while loop that asks the user to input a number until the user decided to stop
 while True:
-    input_number = input("Please give a number between 1-50: ")
+    while True:
+        input_number = input("Please give a number between 1-50: ")
     
-    if input_number.isdigit():
-        input_number = int(input_number)
-        range_sorter(input_number)
+        if input_number.isdigit():
+            input_number = int(input_number)
+            range_sorter(input_number)
+            break
+        else:
+            print("Please enter a number between 1-50")
     
     try_again = input("Would you like to add another number? (y/n): ")
     try_again = try_again.lower()
