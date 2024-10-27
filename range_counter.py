@@ -35,8 +35,8 @@ while True:
         if input_number.isdigit():
             input_number = int(input_number)
             if 1 <= input_number < 51:
-                range_sorter(input_number)
-                print(f"Your number was added to the range {range_sorter(input_number)}.")
+                input_number = range_sorter(input_number)
+                print(f"Your number was added to the range {input_number}.")
                 break
             else:
                 print('Please enter a number between "1-50".')
